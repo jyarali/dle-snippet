@@ -5,6 +5,15 @@
     "version": "1.0.0",
     "icon": "images/dle.png",
     "publisher": "jyarali",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jyarali/dle-snippet.git"
+    },
+    "homepage": "https://github.com/jyarali/dle-snippet/blob/master/README.md",
+    "bugs": {
+        "url": "https://github.com/jyarali/dle-snippet/issues",
+        "email": "jamaldanlod@gmail.com"
+    },
     "engines": {
         "vscode": "^1.25.0"
     },
