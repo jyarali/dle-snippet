@@ -1,0 +1,2483 @@
+{
+    "headers": {
+        "prefix": "headers",
+        "body": [
+            "{headers}"
+        ],
+        "description": "Displays generated meta tags on the page encoding: title, keywords, description. And connects all the necessary scripts. Placed in the template between the <head> tags. This tag is required in the template"
+    },
+    "jsfiles": {
+        "prefix": "jsfiles",
+        "body": [
+            "{jsfiles}"
+        ],
+        "description": "Shows all the involved JS scripts which are used by DLE in the specific area of the template. With this tag you can, for example, transfer all the JS scripts to the bottom of the page to speed up the loading and rendering of your pages. This tag is optional, and if it is not in the template, all the scripts will be connected to the tag {headers}, as before. Attention! If you move the script embedding, you should keep in mind that the {AJAX} tag should also be placed below the {jsfiles} tag. Also, you should consider the work of all third-party scripts in the template if they use Jquery library for example. They should not run until all the scripts will be embedded. We strongly recommend that beginners do not use this tag, as it is designed for experienced webmasters who have experience in working with JS scripts"
+    },
+    "THEME": {
+        "prefix": "THEME",
+        "body": [
+            "{THEME}"
+        ],
+        "description": "The path to the selected template"
+    },
+    "login:home": {
+        "prefix": "login",
+        "body": [
+            "{login}"
+        ],
+        "description": "Panel for users login and registration"
+    },
+    "vote": {
+        "prefix": "vote",
+        "body": [
+            "{vote}"
+        ],
+        "description": "Voting on the website"
+    },
+    "changeskin": {
+        "prefix": "changeskin",
+        "body": [
+            "{changeskin}"
+        ],
+        "description": "Form for changing the website skin"
+    },
+    "calendar": {
+        "prefix": "calendar",
+        "body": [
+            "{calendar}"
+        ],
+        "description": "Calendar module"
+    },
+    "topnews": {
+        "prefix": "topnews",
+        "body": [
+            "{topnews}"
+        ],
+        "description": "Displays the highest-rated articles that have been added in the last month"
+    },
+    "archives": {
+        "prefix": "archives",
+        "body": [
+            "{archives}"
+        ],
+        "description": "Displays the archives"
+    },
+    "info": {
+        "prefix": "info",
+        "body": [
+            "{info}"
+        ],
+        "description": "Displays the service information if necessary. The tag is required in the template"
+    },
+    "content": {
+        "prefix": "content",
+        "body": [
+            "{content}"
+        ],
+        "description": "Displays the website content itself: news, feedback, registration, etc., so it is the main block. This tag is required in the template except the rare cases, depending on the required features of the site"
+    },
+    "custom:all": {
+        "prefix": "custom",
+        "body": [
+            "{custom id=\"${1:1}\" category=\"${2:1}\" author=\"${3:author-name}\" days=\"${4:days-number}\" template=\"${5:template-name}\" available=\"${6|global,main,date,cat,showfull,search,userinfo,register,stats,pm,feedback,favorites,newposts,addnews,lastnews,lastcomments,lostpassword,static,catalog,alltags,tags,allnews|}\" navigation=\"${7|no,yes|}\" from=\"${8:0}\" limit=\"${9:10}\" fixed=\"${10|no,yes|}\" order=\"${11|date,editdate,rating,reads,comments,title,rand,id_as_list|}\" sort=\"${12|desc,asc|}\" cache=\"${13|no,yes|}\"}"
+        ],
+        "description": "tag is responsible for the display of the article in a custom format"
+    },
+    "custom:popular": {
+        "prefix": "custom",
+        "body": [
+            "{custom category=\"${2:1}\" template=\"${5:template-name}\" available=\"${6|global,main,date,cat,showfull,search,userinfo,register,stats,pm,feedback,favorites,newposts,addnews,lastnews,lastcomments,lostpassword,static,catalog,alltags,tags,allnews|}\" navigation=\"${7|no,yes|}\" from=\"${8:0}\" limit=\"${9:10}\" order=\"${11|date,editdate,rating,reads,comments,title,rand,id_as_list|}\" sort=\"${12|desc,asc|}\" cache=\"${13|no,yes|}\"}"
+        ],
+        "description": "tag is responsible for the display of the article in a custom format"
+    },
+    "available": {
+        "prefix": "available",
+        "body": [
+            "[available=${1|global,main,date,cat,showfull,search,userinfo,register,stats,pm,feedback,favorites,newposts,addnews,lastnews,lastcomments,lostpassword,static,catalog,alltags,tags,allnews|}] ${2:text} [/available] "
+        ],
+        "description": "displays the text enclosed in the tag if the specified section of the website is viewed"
+    },
+    "AJAX": {
+        "prefix": "AJAX",
+        "body": [
+            "{AJAX}"
+        ],
+        "description": "Connects all the necessary scripts for DLE and AJAX. The connection is required and it is recommended to be placed on top of the page, just after <body> tag. This tag is required in the template"
+    },
+    "group if": {
+        "prefix": "group",
+        "body": [
+            "[group=${1|1,2,3,4,5|}] ${2:text} [/group]"
+        ],
+        "description": "Displays the text for a certain user group. Where X is a list of user groups IDs separated by commas"
+    },
+    "category:if": {
+        "prefix": "category",
+        "body": [
+            "[category=${1:X}] ${2:text} [/category]"
+        ],
+        "description": "Designed to display text when the user is in X category. Where X is the ID of your category. It is allowed to specify categories separated by commas"
+    },
+    "banner": {
+        "prefix": "banner",
+        "body": [
+            "{banner_${1:name}}"
+        ],
+        "description": "This tag is used to display advertising information on the website. The very name for the banner is set in a special module in the Administration Panel"
+    },
+    "inform": {
+        "prefix": "inform",
+        "body": [
+            "{inform_${1:name}}"
+        ],
+        "description": "This tag is used to display the RSS informers and news from other websites. Name and all the settings for the tag are set in the Administration Panel"
+    },
+    "not-category": {
+        "prefix": "not-category",
+        "body": [
+            "[not-category=${1:1}] ${2:text} [/not-category]"
+        ],
+        "description": "Designed to display text when the user is anywhere, except the X category. Where X is the ID of your search. It is allowed to specify categories separated by commas"
+    },
+    "not-group": {
+        "prefix": "not-group",
+        "body": [
+            "[not-group=${1:1}] ${2:text} [/not-group]"
+        ],
+        "description": "Displays the text for any user group except the specified one. Where X is a list of user groups IDs separated by commas for which the information will not be displayed"
+    },
+    "page-count": {
+        "prefix": "page-count",
+        "body": [
+            "[page-count=${1:1,2,3}] ${2:text} [/page-count]"
+        ],
+        "description": "Displays the enclosed text if the user is at a certain page of the news navigation, regardless of the section of the website, where 1,2,3 are the navigation page numbers"
+    },
+    "not-page-count": {
+        "prefix": "not-page-count",
+        "body": [
+            "[not-page-count=${1:1,2,3}] ${2:text} [/not-page-count]"
+        ],
+        "description": "Displays the enclosed text on any page except the specified ones"
+    },
+    "news": {
+        "prefix": "news",
+        "body": [
+            "[news=${1:1,2,3}] ${2:text} [/news]"
+        ],
+        "description": "Displays the enclosed text if the user views the full version of the article specified in the tag, where 1,2,3 are the article IDs"
+    },
+    "not-news": {
+        "prefix": "not-news",
+        "body": [
+            "[not-news=${1:1,2,3}] ${2:text} [/not-news]"
+        ],
+        "description": "Displays text on any page except the news pages specified in the tag"
+    },
+    "tags:if": {
+        "prefix": "tags",
+        "body": [
+            "[tags=${1:tag1,tag2,tag3}] ${2:text} [/tags]"
+        ],
+        "description": "Displays the enclosed text when a visitor views the page with the listed keywords from the tag cloud, where tag1, tag2, tag3 are keywords from the tag cloud"
+    },
+    "not-tags": {
+        "prefix": "not-tags",
+        "body": [
+            "[not-tags=${1:tag1,tag2,tag3}] ${2:text} [/not-tags]"
+        ],
+        "description": "Displays text on any page except the specified ones"
+    },
+    "related-news": {
+        "prefix": "related-news",
+        "body": [
+            "[related-news]{related-news}[/related-news]"
+        ],
+        "description": "Displays related news block when viewing the full article"
+    },
+    "vk": {
+        "prefix": "vk",
+        "body": [
+            "[vk] ${1:text} [/vk]"
+        ],
+        "description": "Displays the enclosed text if authorization using VK network is enabled"
+    },
+    "vk_url": {
+        "prefix": "vk_url",
+        "body": [
+            "{vk_url}"
+        ],
+        "description": "Displays the URL link to log in to VK"
+    },
+    "odnoklassniki": {
+        "prefix": "odnoklassniki",
+        "body": [
+            "[odnoklassniki] ${1:text} [/odnoklassniki]"
+        ],
+        "description": "Displays the enclosed text if authorization using Odnoklassniki network is enabled"
+    },
+    "odnoklassniki_url": {
+        "prefix": "odnoklassniki_url",
+        "body": [
+            "{odnoklassniki_url}"
+        ],
+        "description": "Displays the URL link to log in to Odnoklassniki"
+    },
+    "facebook": {
+        "prefix": "facebook",
+        "body": [
+            "[facebook] ${1:text} [/facebook]"
+        ],
+        "description": "Displays the enclosed text if authorization using Facebook is enabled"
+    },
+    "facebook_url": {
+        "prefix": "facebook_url",
+        "body": [
+            "{facebook_url}"
+        ],
+        "description": "Displays the URL link to log in to Facebook"
+    },
+    "google": {
+        "prefix": "google",
+        "body": [
+            "[google] ${1:text} [/google]"
+        ],
+        "description": "Displays the enclosed text if authorization using Google is enabled"
+    },
+    "google_url": {
+        "prefix": "google_url",
+        "body": [
+            "{google_url}"
+        ],
+        "description": "Displays the URL link to log in to Google"
+    },
+    "mailru": {
+        "prefix": "mailru",
+        "body": [
+            "[mailru] ${1:text} [/mailru]"
+        ],
+        "description": "Displays the enclosed text if authorization using Mail.ru is enabled"
+    },
+    "mailru_url": {
+        "prefix": "mailru_url",
+        "body": [
+            "{mailru_url}"
+        ],
+        "description": "Displays the URL link to log in to Mail.ru"
+    },
+    "yandex": {
+        "prefix": "yandex",
+        "body": [
+            "[yandex] ${1:text} [/yandex]"
+        ],
+        "description": "Displays the enclosed text if authorization using Yandex is enabled"
+    },
+    "yandex_url": {
+        "prefix": "yandex_url",
+        "body": [
+            "{yandex_url}"
+        ],
+        "description": "Displays the URL link to log in to Yandex"
+    },
+    "xfvalue": {
+        "prefix": "xfvalue",
+        "body": [
+            "[xfvalue_${1:X}]"
+        ],
+        "description": "Displays the value of extra field \"x\", where \"x\" is the name of the extra field"
+    },
+    "xfgiven": {
+        "prefix": "xfgiven",
+        "body": [
+            "[xfgiven_${1:X}] ${2:text} [/xfgiven_${1:X}]"
+        ],
+        "description": "Displays the extra field \"x\" if it is not empty. If the field has no value then the text is simply not displayed"
+    },
+    "xfnotgiven": {
+        "prefix": "xfnotgiven",
+        "body": [
+            "[xfnotgiven_${1:X}] ${2:text} [/xfnotgiven_${1:X}]"
+        ],
+        "description": "Displays the enclosed text if extra field has not been set when publishing the article, where \"х\" is the name of the extra field"
+    },
+    "ifxfvalue": {
+        "prefix": "ifxfvalue",
+        "body": [
+            "[ifxfvalue tagname=\"${1:tagvalue}\"] ${2:Text} [/ifxfvalue]"
+        ],
+        "description": "Displays the enclosed text if the extra field value matches the specified value, where tagmane is a name of the extra field, and tagvalue is its value"
+    },
+    "ifxfvalue not": {
+        "prefix": "ifxfvalue not",
+        "body": [
+            "[ifxfvalue tagname!=\"${1:tagvalue}\"] ${2:Text} [/ifxfvalue]"
+        ],
+        "description": "Text between them will be displayed if the extra field value does not match the specified value, where tagmane is a name of the extra field, and tagvalue is its value"
+    },
+    "catmenu": {
+        "prefix": "catmenu",
+        "body": [
+            "{catmenu}"
+        ],
+        "description": "Displays a menu of the categories of the site. The design of the menu is in the template categorymenu.tpl"
+    },
+    "catnewscount": {
+        "prefix": "catnewscount",
+        "body": [
+            "{catnewscount id=\"${1:1}\"}"
+        ],
+        "description": "Displays the number of articles within a certain category, where X stands for ID of a needed category"
+    },
+    "category-id": {
+        "prefix": "category-id",
+        "body": [
+            "{category-id}"
+        ],
+        "description": "Display the ID of the category viewed by the visitor. This tag will be useful when organizing the menu on the site and when you need to quickly reassign any CSS classes or the names of template files, when you edit articles display templates"
+    },
+    "category-title": {
+        "prefix": "category-title",
+        "body": [
+            "{category-title}"
+        ],
+        "description": "Display the name of the category viewed by the visitor. This tag will be useful when you need to display the name of the category you are viewing"
+    },
+    "category-description": {
+        "prefix": "category-description",
+        "body": [
+            "{category-description}"
+        ],
+        "description": "Display the category description on the site when the user views the category. It is also available when displaying full descriptions"
+    },
+    "page-title": {
+        "prefix": "page-title",
+        "body": [
+            "{page-title}"
+        ],
+        "description": "Display specified in the section \"Titles, descriptions, meta tags\" title for the page"
+    },
+    "page-description": {
+        "prefix": "page-description",
+        "body": [
+            "{page-description}"
+        ],
+        "description": "Displays specified in the section \"Titles, descriptions, meta tags\" description for the page"
+    },
+    "page-title if": {
+        "prefix": "page-title",
+        "body": [
+            "[page-title] ${1:text} [/page-title]"
+        ],
+        "description": "Displays the enclosed text if page title was specified in \"Headers, descriptions, meta tags\" for a viewed page"
+    },
+    "not-page-title": {
+        "prefix": "not-page-title",
+        "body": [
+            "[not-page-title] ${1:text} [/not-page-title]"
+        ],
+        "description": "Displays the enclosed text if page title was not specified in \"Headers, descriptions, meta tags\" for a viewed page"
+    },
+    "page-description if": {
+        "prefix": "page-description",
+        "body": [
+            "[page-description] ${1:text} [/page-description]"
+        ],
+        "description": "Displays the enclosed text if page description was specified in \"Headers, descriptions, meta tags\" for a viewed page"
+    },
+    "not-page-description": {
+        "prefix": "not-page-description",
+        "body": [
+            "[not-page-description] ${1:text} [/not-page-description]"
+        ],
+        "description": "The enclosed text is displayed if the description of the viewed page was not specified"
+    },
+    "include": {
+        "prefix": "include",
+        "body": [
+            "{include file=\"${1:my_block}.tpl\"}"
+        ],
+        "description": "You can also include one template into another using this tag.Tags of the connectable template must be the same as those which are allowed in the template which is used to include that file. For example, if my_block.tpl connects into main.tpl, then tags that are allowed in main.tpl will be working in this file"
+    },
+    "registration-link": {
+        "prefix": "registration-link",
+        "body": [
+            "{registration-link}"
+        ],
+        "description": "Link to the registration page"
+    },
+    "lostpassword-link": {
+        "prefix": "lostpassword-link",
+        "body": [
+            "{lostpassword-link}"
+        ],
+        "description": "Link to the password recovery page"
+    },
+    "logout-link": {
+        "prefix": "logout-link",
+        "body": [
+            "{logout-link}"
+        ],
+        "description": "Link to log out the user form the website"
+    },
+    "admin-link": {
+        "prefix": "admin-link",
+        "body": [
+            "{admin-link}"
+        ],
+        "description": "Link to Administration Panel"
+    },
+    "pm-link": {
+        "prefix": "pm-link",
+        "body": [
+            "{pm-link}"
+        ],
+        "description": "Link to this personal messages page"
+    },
+    "new-pm": {
+        "prefix": "new-pm",
+        "body": [
+            "{new-pm}"
+        ],
+        "description": "The number of new personal messages"
+    },
+    "all-pm": {
+        "prefix": "all-pm",
+        "body": [
+            "{all-pm}"
+        ],
+        "description": "The total number of personal messages"
+    },
+    "favorite-count": {
+        "prefix": "favorite-count",
+        "body": [
+            "{favorite-count}"
+        ],
+        "description": "The number of news added to Favorites list on the website"
+    },
+    "foto": {
+        "prefix": "foto",
+        "body": [
+            "{foto}"
+        ],
+        "description": "Link to the user's avatar"
+    },
+    "admin-link if": {
+        "prefix": "admin-link",
+        "body": [
+            "[admin-link] ${1:text} [/admin-link]"
+        ],
+        "description": "Displays text in the tags if the user has access to the Administration Panel"
+    },
+    "profile-link": {
+        "prefix": "profile-link",
+        "body": [
+            "{profile-link}"
+        ],
+        "description": "Link to the user profile"
+    },
+    "stats-link": {
+        "prefix": "stats-link",
+        "body": [
+            "{stats-link}"
+        ],
+        "description": "Link to website statistics"
+    },
+    "addnews-link": {
+        "prefix": "addnews-link",
+        "body": [
+            "{addnews-link}"
+        ],
+        "description": "Link to the page of adding news on the website"
+    },
+    "favorites-link": {
+        "prefix": "favorites-link",
+        "body": [
+            "{favorites-link}"
+        ],
+        "description": "Link to the user's Favorites list"
+    },
+    "newposts-link": {
+        "prefix": "newposts-link",
+        "body": [
+            "{newposts-link}"
+        ],
+        "description": "Link to the list of unread news since his/her last visit"
+    },
+    "group-icon": {
+        "prefix": "group-icon",
+        "body": [
+            "{group-icon}"
+        ],
+        "description": "Displays the icon of a user group"
+    },
+    "login-method": {
+        "prefix": "login-method",
+        "body": [
+            "{login-method}"
+        ],
+        "description": "Displays what the user should enter to log in depending on what type of authorization is set in script settings: login or e-mail"
+    },
+    "group": {
+        "prefix": "group",
+        "body": [
+            "{group}"
+        ],
+        "description": "Displays the name of the user group where the user is currently belongs to"
+    },
+    "title": {
+        "prefix": "title",
+        "body": [
+            "{title}"
+        ],
+        "description": "Article title"
+    },
+    "title:limit": {
+        "prefix": "title",
+        "body": [
+            "{title limit=\"${1:x}\"}"
+        ],
+        "description": "Article title"
+    },
+    "news-id": {
+        "prefix": "news-id",
+        "body": [
+            "{news-id}"
+        ],
+        "description": "Article ID. This ID is used to store this article in the database"
+    },
+    "short-story": {
+        "prefix": "short-story",
+        "body": [
+            "{short-story}"
+        ],
+        "description": "Displays the article annotation text"
+    },
+    "short-story:limit": {
+        "prefix": "short-story",
+        "body": [
+            "{short-story limit=\"${1:x}\"}"
+        ],
+        "description": "Displays the article annotation text without HTML formatting limited by X number of symbols"
+    },
+    "author": {
+        "prefix": "author",
+        "body": [
+            "{author}"
+        ],
+        "description": "Author of the article"
+    },
+    "date": {
+        "prefix": "date",
+        "body": [
+            "{date}"
+        ],
+        "description": "Publication date. The date format can be configured in system settings"
+    },
+    "rating": {
+        "prefix": "rating",
+        "body": [
+            "{rating}"
+        ],
+        "description": "Displays the article rating"
+    },
+    "rating:if": {
+        "prefix": "rating",
+        "body": [
+            "[rating] ${1:text} [/rating]"
+        ],
+        "description": "Displays the enclosed text if article rating is enabled and hides the contents if it was disabled when adding the article"
+    },
+    "rating-type-1": {
+        "prefix": "rating-type-1",
+        "body": [
+            "[rating-type-1] ${1:text} [/rating-type-1]"
+        ],
+        "description": "Displays the enclosed text if the first 'Rating' type was enabled in script settings"
+    },
+    "rating-type-2": {
+        "prefix": "rating-type-2",
+        "body": [
+            "[rating-type-2] ${1:text} [/rating-type-2]"
+        ],
+        "description": "Displays the enclosed text if the second rating type 'Likes only' was enabled in script settings"
+    },
+    "rating-type-3": {
+        "prefix": "rating-type-3",
+        "body": [
+            "[rating-type-3] ${1:text} [/rating-type-3]"
+        ],
+        "description": "Displays the enclosed text if the third rating type 'Like' or 'Dislike' was enabled in script settings"
+    },
+    "rating-minus": {
+        "prefix": "rating-minus",
+        "body": [
+            "[rating-minus] ${1:text} [/rating-minus]"
+        ],
+        "description": "Displays the enclosed text as a link to dislike the article. This link is displayed if the third rating type is used"
+    },
+    "rating-plus": {
+        "prefix": "rating-plus",
+        "body": [
+            "[rating-plus] ${1:text} [/rating-plus]"
+        ],
+        "description": "Displays the enclosed text as a link to like the article. This link is displayed if the third rating type is used"
+    },
+    "vote-num": {
+        "prefix": "vote-num",
+        "body": [
+            "{vote-num}"
+        ],
+        "description": "Displays the number of users who rated this article"
+    },
+    "comments-num": {
+        "prefix": "comments-num",
+        "body": [
+            "{comments-num}"
+        ],
+        "description": "Displays the number of comments for this article"
+    },
+    "category": {
+        "prefix": "category",
+        "body": [
+            "{category}"
+        ],
+        "description": "Article category"
+    },
+    "category-icon": {
+        "prefix": "category-icon",
+        "body": [
+            "{category-icon}"
+        ],
+        "description": "Link to the category icon. Note, only path to the image is displayed. You should organize its display by yourself, for example <img src=\"{category-icon}\" />"
+    },
+    "views": {
+        "prefix": "views",
+        "body": [
+            "{views}"
+        ],
+        "description": "Number of views of the article"
+    },
+    "favorites": {
+        "prefix": "favorites",
+        "body": [
+            "{favorites}"
+        ],
+        "description": "Link to add or remove from Favorites"
+    },
+    "add-favorites": {
+        "prefix": "add-favorites",
+        "body": [
+            "[add-favorites] ${1:text} [/add-favorites]"
+        ],
+        "description": "Link to add the article to Favorites list on the website"
+    },
+    "del-favorites": {
+        "prefix": "del-favorites",
+        "body": [
+            "[del-favorites] ${1:text} [/del-favorites]"
+        ],
+        "description": "Link to remove the article from Favorites list on the website"
+    },
+    "edit": {
+        "prefix": "edit",
+        "body": [
+            "[edit] ${1:edit} [/edit]"
+        ],
+        "description": "Link to edit the article"
+    },
+    "link-category": {
+        "prefix": "link-category",
+        "body": [
+            "{link-category}"
+        ],
+        "description": "Link to the list of categories where the article belongs to"
+    },
+    "full-link:if": {
+        "prefix": "full-link",
+        "body": [
+            "[full-link] ${1:text} [/full-link]"
+        ],
+        "description": "Link to the full article, for example [full-link]more...[/full-link]"
+    },
+    "com-link": {
+        "prefix": "com-link",
+        "body": [
+            "[com-link] ${1:comments} [/com-link]"
+        ],
+        "description": "Link to comments to this article. Displayed if comments are allowed"
+    },
+    "xfvalue:limit": {
+        "prefix": "xfvalue",
+        "body": [
+            "[xfvalue_${1:X} limit=\"${2:X2}\"]"
+        ],
+        "description": "Displays the article annotation text without HTML formatting limited by X2 number of symbols. Text is limited to the last logical word. For example, [xfvalue_test limit=\"50\"] shows the first 50 symbols of the extra field value named test"
+    },
+    "xfvalue_thumb": {
+        "prefix": "xfvalue_thumb",
+        "body": [
+            "[xfvalue_thumb_url_${1:X}]"
+        ],
+        "description": "This tag can be used only if extra field has type \"Image\". The tag displays only the URL for the thumbnails of the uploaded image, where \"х\" is the name of the extra field"
+    },
+    "xfvalue_image": {
+        "prefix": "xfvalue_image",
+        "body": [
+            "[xfvalue_image_url_${1:X}]"
+        ],
+        "description": "This tag can be used only if extra field has type \"Image\". The tag displays only the URL for the full size image of the uploaded image, where \"х\" is the name of the extra field"
+    },
+    "xfvalue image": {
+        "prefix": "xfvalue image",
+        "body": [
+            "[xfvalue_${1:X} image=\"${2:Nr}\"]"
+        ],
+        "description": "Display the uploaded images separately for extra fields of \"Image Gallery\" type, where \"X\" is the name of the extra field, and \"Nr\" is the number of image from the gallery. For example, if you apply [xfvalue_test image=\"2\"], then image number two will be displayed that loaded into an additional field named \"test\""
+    },
+    "tags": {
+        "prefix": "tags",
+        "body": [
+            "{tags}"
+        ],
+        "description": "Displays clickable keywords of the article"
+    },
+    "full-link": {
+        "prefix": "full-link",
+        "body": [
+            "{full-link}"
+        ],
+        "description": "Displays the full permanent address of the article"
+    },
+    "edit-date:if": {
+        "prefix": "edit-date",
+        "body": [
+            "[edit-date] ${1:text} [/edit-date]"
+        ],
+        "description": "Displays the text if the text or the article has been edited"
+    },
+    "edit-date": {
+        "prefix": "edit-date",
+        "body": [
+            "{edit-date}"
+        ],
+        "description": "Displays the date when the article has been edited"
+    },
+    "editor:story": {
+        "prefix": "editor",
+        "body": [
+            "{editor}"
+        ],
+        "description": "Displays the login of user who edited the article"
+    },
+    "edit-reason:if": {
+        "prefix": "edit-reason",
+        "body": [
+            "[edit-reason] ${1:text} [/edit-reason]"
+        ],
+        "description": "Displays the text if edit reason has been specified"
+    },
+    "edit-reason": {
+        "prefix": "edit-reason",
+        "body": [
+            "{edit-reason}"
+        ],
+        "description": "Displays the edit reason"
+    },
+    "date:format": {
+        "prefix": "date",
+        "body": [
+            "{date=${1:date-fromat}}"
+        ],
+        "description": "Displays the date in the specified format. It allows you to display both the full date and its separate parts. The date format is set in accordance with the PHP format. For example, {date=d} tag displays the day of the article or comment publication, and {date=F} tag displays the name of the month. {date=d-m-Y H:i} displays the full date and time"
+    },
+    "approve": {
+        "prefix": "approve",
+        "body": [
+            "{approve}"
+        ],
+        "description": "Displayed only when a user is viewing his/her profile and shows the status of his/her news that are awaiting moderation"
+    },
+    "fixed": {
+        "prefix": "fixed",
+        "body": [
+            "[fixed] ${1:text} [/fixed]"
+        ],
+        "description": "Displays the enclosed text if this article is fixed"
+    },
+    "not-fixed": {
+        "prefix": "not-fixed",
+        "body": [
+            "[not-fixed] ${1:text} [/not-fixed]"
+        ],
+        "description": "Displays the enclosed text if this article is not fixed"
+    },
+    "day-news": {
+        "prefix": "day-news",
+        "body": [
+            "[day-news] ${1:text} [/day-news]"
+        ],
+        "description": "Displays the link to all the news published in the same day as the given article. This tag can be used in conjunction with {date}"
+    },
+    "catlist": {
+        "prefix": "catlist",
+        "body": [
+            "[catlist=${1:1,2....}] ${2:text} [/catlist]"
+        ],
+        "description": "Displays the enclosed text if the article belongs to the specified categories"
+    },
+    "not-catlist": {
+        "prefix": "not-catlist",
+        "body": [
+            "[not-catlist=${1:1,2....}] ${2:text} [/not-catlist]"
+        ],
+        "description": "Displays the enclosed text if the article does not belong to the specified categories"
+    },
+    "login": {
+        "prefix": "login",
+        "body": [
+            "{login}"
+        ],
+        "description": "Displays the name of the user who added the article as a simple text without a link to his profile"
+    },
+    "poll:if": {
+        "prefix": "poll",
+        "body": [
+            "[poll] ${1:text} [/poll]"
+        ],
+        "description": "Displays the enclosed text if this publication has a voting"
+    },
+    "poll": {
+        "prefix": "poll",
+        "body": [
+            "{poll}"
+        ],
+        "description": "Displays the voting of this article"
+    },
+    "not-poll": {
+        "prefix": "not-poll",
+        "body": [
+            "[not-poll] ${1:text} [/not-poll]"
+        ],
+        "description": "Displays the enclosed text if  if this publication has no voting"
+    },
+    "profile": {
+        "prefix": "profile",
+        "body": [
+            "[profile] ${1:text} [/profile]"
+        ],
+        "description": "Displays the link to the article's author profile, without the use of pop-up miniprofile window"
+    },
+    "complaint": {
+        "prefix": "complaint",
+        "body": [
+            "[complaint] ${1:text} [/complaint]"
+        ],
+        "description": "Displays the enclosed text as a link to writing a complaint to the article"
+    },
+    "category-url": {
+        "prefix": "category-url",
+        "body": [
+            "{category-url}"
+        ],
+        "description": "Displays the full URL to the category where the article belongs to. This tag displays only the URL in its pure form, without any formatting or ready reference"
+    },
+    "comments:if": {
+        "prefix": "comments",
+        "body": [
+            "[comments] ${1:text} [/comments]"
+        ],
+        "description": "Displays the enclosed text if there are comments for this article"
+    },
+    "not-comments": {
+        "prefix": "not-comments",
+        "body": [
+            "[not-comments] ${1:text} [/not-comments]"
+        ],
+        "description": "Displays the enclosed text if there are no comments for this article"
+    },
+    "image-": {
+        "prefix": "image-",
+        "body": [
+            "{image-${1:x}}"
+        ],
+        "description": "Displays the URL of images that are in the article annotation, where x is the number of picture in the article. For example,{image-1} will display URL of the first image in the article annotation"
+    },
+    "image-:if": {
+        "prefix": "image-",
+        "body": [
+            "[image-${1:x}] text [/image-${1:x}]"
+        ],
+        "description": "Displays the enclosed text only if there is an image number X in the article"
+    },
+    "declination": {
+        "prefix": "declination",
+        "body": [
+            "[declination=${1:X}] ${2:text} [/declination]"
+        ],
+        "description": "Changes endings according to the specified number. X is a number and \"text\" is a word with its endings. Endings are specified separated by \"|\" symbol. This tag is useful to be used with other tags that display, for example, number of views of the article or number of comments. For example, [declination={comments-num}]commen|t|ts[/declination] displays the following, depending on the number of comments: \"comment\", \"comments\""
+    },
+    "newscount": {
+        "prefix": "newscount",
+        "body": [
+            "[newscount=${1:x}] ${2:text} [/newscount]"
+        ],
+        "description": "Displays the enclosed text if the article number X is shown, where X is the number of the displayed article. For example,[newscount=1] text [/newscount] displays the text when the first article on the page is shown"
+    },
+    "not-newscount": {
+        "prefix": "not-newscount",
+        "body": [
+            "[not-newscount=${1:x}] ${2:text} [/not-newscount]"
+        ],
+        "description": "Displays the enclosed text when any article is shown except the article number X. This tag is useful if you want to display any design elements in all the articles, except the specified ones. For example, if you need not show something in the first article on the page"
+    },
+    "full-story": {
+        "prefix": "full-story",
+        "body": [
+            "{full-story}"
+        ],
+        "description": "Full article"
+    },
+    "full-story:limit": {
+        "prefix": "full-story",
+        "body": [
+            "{full-story limit=\"${1:x}\"}"
+        ],
+        "description": "Displays the full article text without HTML formatting limited by X number of symbols"
+    },
+    "pages:fullstory": {
+        "prefix": "pages",
+        "body": [
+            "{pages}"
+        ],
+        "description": "Article pages navigation"
+    },
+    "pages:if": {
+        "prefix": "pages",
+        "body": [
+            "[pages] ${1:text} [/pages]"
+        ],
+        "description": "Displays the enclosed text if the article consists of few pages using {PАGEBREAK} tag, and removes the text from it if it consists of one page"
+    },
+    "print-link": {
+        "prefix": "print-link",
+        "body": [
+            "[print-link] ${1:print} [/print-link]"
+        ],
+        "description": "Link to the printable version"
+    },
+    "comments": {
+        "prefix": "comments",
+        "body": [
+            "{comments}"
+        ],
+        "description": "Displays comments to this article. This tag will be useful for those who need to post comments on the page of the full article. This tag is not required. In its absence the comments will be automatically located below the full article"
+    },
+    "addcomments": {
+        "prefix": "addcomments",
+        "body": [
+            "{addcomments}"
+        ],
+        "description": "Displays the Add comments form. In conjunction with a new {comments} tag you can place Add comments form both above and below the comments. This tag is not required. In its absence the comments will be automatically located below the full article"
+    },
+    "navigation": {
+        "prefix": "navigation",
+        "body": [
+            "{navigation}"
+        ],
+        "description": "Displays the comments navigation if there are several pages with ocmments. In conjunction with a new {comments} tag you can place navigation both above and below the comments. This tag is not required. In its absence the navigation will be automatically located below the full article"
+    },
+    "fullimage": {
+        "prefix": "fullimage",
+        "body": [
+            "{fullimage-${1:x}}"
+        ],
+        "description": "Displays the URL of the image which is in full article, where \"x\" is the number of the picture in the article"
+    },
+    "fullimage:if": {
+        "prefix": "fullimage",
+        "body": [
+            "[fullimage-${1:x}] ${2:text} [/fullimage-${1:x}]"
+        ],
+        "description": "Displays the enclosed text only if there is the image number \"x\" in the article"
+    },
+    "comments-subscribe": {
+        "prefix": "comments-subscribe",
+        "body": [
+            "[comments-subscribe] ${1:text} [/comments-subscribe]"
+        ],
+        "description": "Text between them is displayed as a link to the article comments subscription"
+    },
+    "next-url:if": {
+        "prefix": "next-url",
+        "body": [
+            "[next-url] ${1:text} [/next-url]"
+        ],
+        "description": "display enclosed text if article has the next article"
+    },
+    "next-url": {
+        "prefix": "next-url",
+        "body": [
+            "{next-url}"
+        ],
+        "description": "Displays the URL of the next article"
+    },
+    "prev-url:if": {
+        "prefix": "prev-url",
+        "body": [
+            "[prev-url] ${1:text} [/prev-url]"
+        ],
+        "description": "Display the enclosed text if article has the previous article"
+    },
+    "prev-url": {
+        "prefix": "prev-url",
+        "body": [
+            "{prev-url}"
+        ],
+        "description": "Displays the URL of the previous article"
+    },
+    "mail": {
+        "prefix": "mail",
+        "body": [
+            "{mail}"
+        ],
+        "description": "E-mail of user who left the comment"
+    },
+    "comment": {
+        "prefix": "comment",
+        "body": [
+            "{comment}"
+        ],
+        "description": "Text of comment"
+    },
+    "comment:if": {
+        "prefix": "comment",
+        "body": [
+            "{comment limit=\"${1:X}\"}"
+        ],
+        "description": "Text of comment"
+    },
+    "comment-id": {
+        "prefix": "comment-id",
+        "body": [
+            "{comment-id}"
+        ],
+        "description": "Comment ID"
+    },
+    "ip": {
+        "prefix": "ip",
+        "body": [
+            "{ip}"
+        ],
+        "description": "IP address of user who left the comment. Displays only to website Administrators"
+    },
+    "com-edit": {
+        "prefix": "com-edit",
+        "body": [
+            "[com-edit] ${1:edit} [/com-edit]"
+        ],
+        "description": "Link to the comment edit if it is allowed"
+    },
+    "com-del": {
+        "prefix": "com-del",
+        "body": [
+            "[com-del] ${1:delete} [/com-del]"
+        ],
+        "description": "Link to the comment removal if it is allowed"
+    },
+    "news_title": {
+        "prefix": "news_title",
+        "body": [
+            "{news_title}"
+        ],
+        "description": "Link to the article when viewing the last comments. Tag is removed if comments are displayed in the article"
+    },
+    "news-title": {
+        "prefix": "news-title",
+        "body": [
+            "{news-title}"
+        ],
+        "description": "It displays HTML-safe header of an article where the given comment belongs to. This tag is useful when you display customized comments and last comments"
+    },
+    "news-link": {
+        "prefix": "news-link",
+        "body": [
+            "{news-link}"
+        ],
+        "description": "It displays the URL of an article where the comment belongs to. This tag is useful when you display customized comments and last comments"
+    },
+    "fullname": {
+        "prefix": "fullname",
+        "body": [
+            "{fullname}"
+        ],
+        "description": "Full name of a user"
+    },
+    "land": {
+        "prefix": "land",
+        "body": [
+            "{land}"
+        ],
+        "description": "Place of residence"
+    },
+    "signature:if": {
+        "prefix": "signature",
+        "body": [
+            "[signature] ${1:text} [/signature]"
+        ],
+        "description": "Displays the enclosed text if user has set the signature in his profile"
+    },
+    "signature": {
+        "prefix": "signature",
+        "body": [
+            "{signature}"
+        ],
+        "description": "User's signature"
+    },
+    "registration:user": {
+        "prefix": "registration",
+        "body": [
+            "{registration}"
+        ],
+        "description": "Date of registration on the website"
+    },
+    "lastdate": {
+        "prefix": "lastdate",
+        "body": [
+            "{lastdate}"
+        ],
+        "description": "Date of the last visit"
+    },
+    "fast": {
+        "prefix": "fast",
+        "body": [
+            "[fast] ${1:text} [/fast]"
+        ],
+        "description": "Fast comments quotation"
+    },
+    "group-name": {
+        "prefix": "group-name",
+        "body": [
+            "{group-name}"
+        ],
+        "description": "Name of the user's group"
+    },
+    "news-num": {
+        "prefix": "news-num",
+        "body": [
+            "{news-num}"
+        ],
+        "description": "Number of user's articles"
+    },
+    "comm-num": {
+        "prefix": "comm-num",
+        "body": [
+            "{comm-num}"
+        ],
+        "description": "Number of user's comments"
+    },
+    "mass-action": {
+        "prefix": "mass-action",
+        "body": [
+            "{mass-action}"
+        ],
+        "description": "Establishes the possibility of mass comments marking to perform mass actions on the site"
+    },
+    "fullname:if": {
+        "prefix": "fullname",
+        "body": [
+            "[fullname] ${1:text} [/fullname]"
+        ],
+        "description": "Displays the enclosed text if the full name has been set by the user"
+    },
+    "not-fullname": {
+        "prefix": "not-fullname",
+        "body": [
+            "[not-fullname] ${1:text} [/not-fullname]"
+        ],
+        "description": "Displays the enclosed text only if the full name has not been set by the user"
+    },
+    "land:if": {
+        "prefix": "land",
+        "body": [
+            "[land] ${1:text} [/land]"
+        ],
+        "description": "Displays the enclosed text only if user has set the place of residence"
+    },
+    "not-land": {
+        "prefix": "not-land",
+        "body": [
+            "[not-land] ${1:text} [/not-land]"
+        ],
+        "description": "Displays the enclosed text only if user has not set the place of residence"
+    },
+    "news-num:if": {
+        "prefix": "news-num",
+        "body": [
+            "[news-num] ${1:text} [/news-num]"
+        ],
+        "description": "Displays the enclosed text only if user has news published by him"
+    },
+    "not-news-num": {
+        "prefix": "not-news-num",
+        "body": [
+            "[not-news-num] ${1:text} [/not-news-num]"
+        ],
+        "description": "Displays the enclosed text only if user has no news published by him"
+    },
+    "comm-num:if": {
+        "prefix": "comm-num",
+        "body": [
+            "[comm-num] ${1:text} [/comm-num]"
+        ],
+        "description": "Displays the enclosed text only if user has comments"
+    },
+    "not-comm-num": {
+        "prefix": "not-comm-num",
+        "body": [
+            "[not-comm-num] ${1:text} [/not-comm-num]"
+        ],
+        "description": "Displays the enclosed text only if user has no comments"
+    },
+    "online": {
+        "prefix": "online",
+        "body": [
+            "[online] ${1:text} [/online]"
+        ],
+        "description": "Displays the enclosed text only if user is online (20 minutes since the last visit)"
+    },
+    "offline": {
+        "prefix": "offline",
+        "body": [
+            "[offline] ${1:text} [/offline]"
+        ],
+        "description": "Displays the enclosed text only if user is offline"
+    },
+    "spam": {
+        "prefix": "spam",
+        "body": [
+            "[spam] ${1:Spammer} [/spam]"
+        ],
+        "description": "Displays the enclosed text as a link to mark this user who left the comment as a spammer"
+    },
+    "commentsgroup": {
+        "prefix": "commentsgroup",
+        "body": [
+            "[commentsgroup=${1:1,2,3}] ${2:text} [/commentsgroup]"
+        ],
+        "description": "Displays the enclosed text if the comments was written by the user who belonged to specified groups"
+    },
+    "not-commentsgroup": {
+        "prefix": "not-commentsgroup",
+        "body": [
+            "[not-commentsgroup=${1:1,2,3}] ${2:text} [/not-commentsgroup]"
+        ],
+        "description": "Displays the enclosed text if the comments was written by the user who did not belong to specified groups"
+    },
+    "commentscount": {
+        "prefix": "commentscount",
+        "body": [
+            "[commentscount=${1:x}] ${2:text} [/commentscount]"
+        ],
+        "description": "Displays the enclosed text if comment number X is displayed, where X is the number of comment shown on the page. For example, [commentscount=1] text [/commentscount] will show the text when the first comment will be displayed on the page. This tag is useful if you want to choose the place to display ads between comments. For example, the code [commentscount=1,10] ad code [/commentscount] which is added to the end of the template will display ads after the first and the tenth comment"
+    },
+    "not-commentscount": {
+        "prefix": "not-commentscount",
+        "body": [
+            "[not-commentscount=${1:x}] ${2:text} [/not-commentscount]"
+        ],
+        "description": "Displays the enclosed text when any comments are displayed except the comment number X. This tag is useful if you want to show some design elements in all the article annotations except the specified ones, for example, if you do not want something to be displayed in the first article annotation"
+    },
+    "reply": {
+        "prefix": "reply",
+        "body": [
+            "[reply] ${1:text} [/reply]"
+        ],
+        "description": "Enclosed text is displayed as a link to a pop-up window for replying to a comment if tree-like comments are enabled. If they are disabled it inserts the given commentator's username to the new comment form"
+    },
+    "treecomments": {
+        "prefix": "treecomments",
+        "body": [
+            "[treecomments] ${1:text} [/treecomments]"
+        ],
+        "description": "Enclosed text is displayed if tree-like comments are enabled in script settings"
+    },
+    "not-treecomments": {
+        "prefix": "not-treecomments",
+        "body": [
+            "[not-treecomments] ${1:text} [/not-treecomments]"
+        ],
+        "description": "Enclosed text is displayed if tree-like comments are disabled in script settings"
+    },
+    "rootcomments": {
+        "prefix": "rootcomments",
+        "body": [
+            "[rootcomments] ${1:text} [/rootcomments]"
+        ],
+        "description": "The enclosed text is displayed if the comment is the parent comment, rather than a response to any other comment"
+    },
+    "childrencomments": {
+        "prefix": "childrencomments",
+        "body": [
+            "[childrencomments] ${1:text} [/childrencomments]"
+        ],
+        "description": "Display the enclosed text if the comment is a reply to another comment"
+    },
+    "replycount": {
+        "prefix": "replycount",
+        "body": [
+            "{replycount}"
+        ],
+        "description": "It displays the number of replies for this comment"
+    },
+    "comments-author": {
+        "prefix": "comments-author",
+        "body": [
+            "[comments-author] ${1:text} [/comments-author]"
+        ],
+        "description": "Enclosed text is displayed if user who views the page is the author of the comment"
+    },
+    "not-comments-author": {
+        "prefix": "not-comments-author",
+        "body": [
+            "[not-comments-author] ${1:text} [/not-comments-author]"
+        ],
+        "description": "Enclosed text is displayed if user who views the page is not the author of the comment"
+    },
+    "news-author": {
+        "prefix": "news-author",
+        "body": [
+            "[news-author] ${1:text} [/news-author]"
+        ],
+        "description": "Enclosed text is displayed if comment belongs to the author of the given article"
+    },
+    "not-news-author": {
+        "prefix": "not-news-author",
+        "body": [
+            "[not-news-author] ${1:text} [/not-news-author]"
+        ],
+        "description": "Enclosed text is displayed if comment does not belong to the author of the given article"
+    },
+    "positive-comment": {
+        "prefix": "positive-comment",
+        "body": [
+            "[positive-comment] ${1:text} [/positive-comment]"
+        ],
+        "description": "Enclosed text is displayed if the comment has positive rating"
+    },
+    "negative-comment": {
+        "prefix": "negative-comment",
+        "body": [
+            "[negative-comment] ${1:text} [/negative-comment]"
+        ],
+        "description": "Enclosed text is displayed if the comment has negative rating"
+    },
+    "neutral-comment": {
+        "prefix": "neutral-comment",
+        "body": [
+            "[neutral-comment] ${1:text} [/neutral-comment]"
+        ],
+        "description": "Enclosed text is displayed if the comment has neutral rating"
+    },
+    "root": {
+        "prefix": "root",
+        "body": [
+            "[root] ${1:text} [/root]"
+        ],
+        "description": "Displays a text between them when initially generating the menu template. These tags can be used to create the appearance of the menu. For example, to add some HTML elements, or elements which are not included in a category list"
+    },
+    "item": {
+        "prefix": "item",
+        "body": [
+            "[item] ${1:text} [/item]"
+        ],
+        "description": "Represents a single category list item when forming category menu list. Text between these tags is displayed with HTML appearance customized for each list item"
+    },
+    "sub-prefix": {
+        "prefix": "sub-prefix",
+        "body": [
+            "[sub-prefix] ${1:text} [/sub-prefix]"
+        ],
+        "description": "Displays text between them as a subcategory prefix if a category is parental and it has subcategories"
+    },
+    "sub-suffix": {
+        "prefix": "sub-suffix",
+        "body": [
+            "[sub-suffix] ${1:text} [/sub-suffix]"
+        ],
+        "description": "Displays text between them as a subcategory suffix if a category is parental and it has subcategories"
+    },
+    "sub-item": {
+        "prefix": "sub-item",
+        "body": [
+            "{sub-item}"
+        ],
+        "description": "Represents subcategories in a parent category if it has subcategories. This tag is used only within [item] [/item] tags"
+    },
+    "id": {
+        "prefix": "id",
+        "body": [
+            "{id}"
+        ],
+        "description": "Show category's ID"
+    },
+    "name": {
+        "prefix": "name",
+        "body": [
+            "{name}"
+        ],
+        "description": "Displays a category name. This tag is used only within [item] [/item] tags"
+    },
+    "url": {
+        "prefix": "url",
+        "body": [
+            "{url}"
+        ],
+        "description": "Displays a category URL. This tag is used only within [item] [/item] tags"
+    },
+    "icon": {
+        "prefix": "icon",
+        "body": [
+            "{icon}"
+        ],
+        "description": "Displays a category icon. This tag is used only within [item] [/item] tags"
+    },
+    "news-count": {
+        "prefix": "news-count",
+        "body": [
+            "{news-count}"
+        ],
+        "description": "Displays a number of articles of the category. This tag is used only within [item] [/item] tags"
+    },
+    "active": {
+        "prefix": "active",
+        "body": [
+            "[active] ${1:text} [/active]"
+        ],
+        "description": "Displays a text between them if a viewed category or article is of the category from the menu. This tag is used only within [item] [/item] tags and is usually used to emphasize active categories form the menu"
+    },
+    "not-active": {
+        "prefix": "not-active",
+        "body": [
+            "[not-active] ${1:text} [/not-active]"
+        ],
+        "description": "The enclosed text is displayed if the viewed category or article does not belong to a menu category. This tag can only be located inside the [item] [/item] tags and is used, for example, to output some information (e.g. links) only for non-active menu categories"
+    },
+    "isparent": {
+        "prefix": "isparent",
+        "body": [
+            "[isparent] ${1:text} [/isparent]"
+        ],
+        "description": "Displays a text between them if a category is parental and contains subcategories. This tag is used only within [item] [/item] tags"
+    },
+    "allow-download": {
+        "prefix": "allow-download",
+        "body": [
+            "[allow-download] ${1:text} [/allow-download]"
+        ],
+        "description": "Displays the enclosed text if the website user is allowed to download files"
+    },
+    "not-allow-download": {
+        "prefix": "not-allow-download",
+        "body": [
+            "[not-allow-download] ${1:text} [/not-allow-download]"
+        ],
+        "description": "Displays the enclosed text if the website user is not allowed to download files"
+    },
+    "count:if": {
+        "prefix": "count",
+        "body": [
+            "[count] ${1:text} [/count]"
+        ],
+        "description": "Displays the enclosed text if the file downloads counter is enabled in script settings"
+    },
+    "id:file": {
+        "prefix": "id",
+        "body": [
+            "{id}"
+        ],
+        "description": "Displays the unique ID of the uploaded file. Information about this file is stored in the database"
+    },
+    "name:file": {
+        "prefix": "name",
+        "body": [
+            "{name}"
+        ],
+        "description": "Displays the name of the uploaded file, or text specified as the name in [аttachment=...] tag in the text of the article"
+    },
+    "extension": {
+        "prefix": "extension",
+        "body": [
+            "{extension}"
+        ],
+        "description": "Displays the extension of the attached file"
+    },
+    "link:file": {
+        "prefix": "link",
+        "body": [
+            "{link}"
+        ],
+        "description": "URL to the file downloading"
+    },
+    "size": {
+        "prefix": "size",
+        "body": [
+            "{size}"
+        ],
+        "description": "File size"
+    },
+    "md5": {
+        "prefix": "md5",
+        "body": [
+            "{md5}"
+        ],
+        "description": "MD5 checksum of the uploaded file"
+    },
+    "date:file": {
+        "prefix": "date",
+        "body": [
+            "{date}"
+        ],
+        "description": "Displays the date of the file upload, in the date format that is specified in your script"
+    },
+    "date:file-formated": {
+        "prefix": "date",
+        "body": [
+            "{date=${1:date fromat}}"
+        ],
+        "description": "Displays the date in the specified format. It allows you to display both the full date and its separate parts. The date format is set in accordance with the PHP format. For example, {date=d} tag displays the day of the article or comment publication, and {date=F} tag displays the name of the month. {date=d-m-Y H:i} displays the full date and time"
+    },
+    "count": {
+        "prefix": "count",
+        "body": [
+            "{count}"
+        ],
+        "description": "The number of downloads of the file"
+    },
+    "online-view-link": {
+        "prefix": "online-view-link",
+        "body": [
+            "{online-view-link}"
+        ],
+        "description": "Displays URL link to view the document online in the browser"
+    },
+    "allow-online": {
+        "prefix": "allow-online",
+        "body": [
+            "[allow-online] ${1:text} [/allow-online]"
+        ],
+        "description": "Displays the enclosed text, if the loaded document has supported format for online viewing"
+    },
+    "title:addcomments": {
+        "prefix": "title",
+        "body": [
+            "{title}"
+        ],
+        "description": "Title that explains if this form is for adding or to editing the comment"
+    },
+    "not-logged": {
+        "prefix": "not-logged",
+        "body": [
+            "[not-logged] ${1:text} [/not-logged]"
+        ],
+        "description": "Displays the enclosed code if the user is not registered. For example, you can enclose login and e-mail fields in these tags. If these fields are not filled and the user is logged in, these data will be automatically taken from his/her profile"
+    },
+    "editor:addcomment": {
+        "prefix": "editor",
+        "body": [
+            "{editor}"
+        ],
+        "description": "Displays BBCODE or WYSIWYG editor depending on the settings for adding the comment"
+    },
+    "sec_code:if": {
+        "prefix": "sec_code",
+        "body": [
+            "[sec_code] ${1:and} [/sec_code]"
+        ],
+        "description": "Displays the enclosed text if it was set to use CAPTCHA"
+    },
+    "sec_code": {
+        "prefix": "sec_code",
+        "body": [
+            "{sec_code}"
+        ],
+        "description": "Displays the CAPTCHA code"
+    },
+    "recaptcha:if": {
+        "prefix": "recaptcha",
+        "body": [
+            "[recaptcha] ${1:text} [/recaptcha]"
+        ],
+        "description": "Displays the enclosed text if reCAPTCHA type was enabled in settings"
+    },
+    "recaptcha": {
+        "prefix": "recaptcha",
+        "body": [
+            "{recaptcha}"
+        ],
+        "description": "Displays reCAPTCHA widget if it was enabled in settings"
+    },
+    "question:if": {
+        "prefix": "question",
+        "body": [
+            "[question] ${1:and} [/question]"
+        ],
+        "description": "Displays the enclosed text if question/answer system was enabled"
+    },
+    "question": {
+        "prefix": "question",
+        "body": [
+            "{question}"
+        ],
+        "description": "Displays the question from the list of questions that was previously set"
+    },
+    "title:vote": {
+        "prefix": "title",
+        "body": [
+            "{title}"
+        ],
+        "description": "Voting title"
+    },
+    "question:vote": {
+        "prefix": "question",
+        "body": [
+            "{question}"
+        ],
+        "description": "Question of vote"
+    },
+    "votes": {
+        "prefix": "votes",
+        "body": [
+            "{votes}"
+        ],
+        "description": "Number of votes"
+    },
+    "list": {
+        "prefix": "list",
+        "body": [
+            "{list}"
+        ],
+        "description": "List of possible answers"
+    },
+    "voted": {
+        "prefix": "voted",
+        "body": [
+            "[voted] ${1:text} [/voted]"
+        ],
+        "description": "Displays the enclosed text if the user has already voted, otherwise the text is hidden"
+    },
+    "not-voted": {
+        "prefix": "not-voted",
+        "body": [
+            "[not-voted] ${1:text} [/not-voted]"
+        ],
+        "description": "Displays the enclosed text if the user has not voted yet, otherwise the text is hidden"
+    },
+    "category:addarticle": {
+        "prefix": "category",
+        "body": [
+            "{category}"
+        ],
+        "description": "Displays the field of the category selection where the article will belong to"
+    },
+    "xfinput": {
+        "prefix": "xfinput",
+        "body": [
+            "[xfinput_${1:X}]"
+        ],
+        "description": "Displays your selected extra field in the form to add news to your desired location, where X is the name of an additional field for news"
+    },
+    "xfields": {
+        "prefix": "xfields",
+        "body": [
+            "{xfields}"
+        ],
+        "description": "Displays extra fields (see the test template for details)"
+    },
+    "bbcode": {
+        "prefix": "bbcode",
+        "body": [
+            "{bbcode}"
+        ],
+        "description": "Displays buttons for inserting tags in the article"
+    },
+    "admintag": {
+        "prefix": "admintag",
+        "body": [
+            "{admintag}"
+        ],
+        "description": "Displays extra options for Administrator"
+    },
+    "urltag": {
+        "prefix": "urltag",
+        "body": [
+            "[urltag] ${1:and} [/urltag]"
+        ],
+        "description": "Displays the enclosed text to edit User-friendly URL of the article (available for Administrator)"
+    },
+    "not-wysywyg": {
+        "prefix": "not-wysywyg",
+        "body": [
+            "[not-wysywyg] ${1:and} [/not-wysywyg]"
+        ],
+        "description": "Displays the enclosed text if WYSIWYG is disabled. If it is enabled then the text will be removed"
+    },
+    "shortarea": {
+        "prefix": "shortarea",
+        "body": [
+            "{shortarea}"
+        ],
+        "description": "Displays WYSIWYG editor to edit the article annotation"
+    },
+    "title:addarticle": {
+        "prefix": "title",
+        "body": [
+            "{title}"
+        ],
+        "description": "Displays the title when editing the article"
+    },
+    "alt-name": {
+        "prefix": "alt-name",
+        "body": [
+            "{alt-name}"
+        ],
+        "description": "User-friendly URL value"
+    },
+    "fullarea": {
+        "prefix": "fullarea",
+        "body": [
+            "{fullarea}"
+        ],
+        "description": "Displays WYSIWYG editor when adding the full article"
+    },
+    "votetitle:addarticle": {
+        "prefix": "votetitle",
+        "body": [
+            "{votetitle}"
+        ],
+        "description": "Displays the voting title when editing the article"
+    },
+    "frage": {
+        "prefix": "frage",
+        "body": [
+            "{frage}"
+        ],
+        "description": "Displays the question from the voting when editing the article"
+    },
+    "votebody": {
+        "prefix": "votebody",
+        "body": [
+            "{votebody}"
+        ],
+        "description": "Displays the list of possible answers when editing the article"
+    },
+    "short-preview": {
+        "prefix": "short-preview",
+        "body": [
+            "[short-preview] ${1:text} [/short-preview] "
+        ],
+        "description": "displays the text for the article annotation template"
+    },
+    "full-preview": {
+        "prefix": "full-preview",
+        "body": [
+            "[full-preview] ${1:text} [/full-preview] "
+        ],
+        "description": " displays the text for the full article template"
+    },
+    "static-preview": {
+        "prefix": "static-preview",
+        "body": [
+            "[static-preview] ${1:text} [/static-preview] "
+        ],
+        "description": "displays the text for the static page"
+    },
+    "prev-link": {
+        "prefix": "prev-link",
+        "body": [
+            "[prev-link] ${1:text} [/prev-link]"
+        ],
+        "description": "Creates a link to the previous page (if there is one)"
+    },
+    "next-link": {
+        "prefix": "next-link",
+        "body": [
+            "[next-link] ${1:text} [/next-link]"
+        ],
+        "description": "Creates a link to the next page (if there is one)"
+    },
+    "pages": {
+        "prefix": "pages",
+        "body": [
+            "{pages}"
+        ],
+        "description": "Creates a link to pages. For example: 1 2 3 4"
+    },
+    "registration:registratin": {
+        "prefix": "registration",
+        "body": [
+            "[registration] ${1:and} [/registration]"
+        ],
+        "description": "Displays the enclosed text when registering"
+    },
+    "validation": {
+        "prefix": "validation",
+        "body": [
+            "[validation] ${1:and} [/validation]"
+        ],
+        "description": "Displays the enclosed text during the validation"
+    },
+    "reg_code:registration": {
+        "prefix": "reg_code",
+        "body": [
+            "{reg_code}"
+        ],
+        "description": "Shows the CAPTCHA code to the user"
+    },
+    "usertitle": {
+        "prefix": "usertitle",
+        "body": [
+            "{usertitle}"
+        ],
+        "description": "Username (in User Profile)"
+    },
+    "info:profile": {
+        "prefix": "info",
+        "body": [
+            "{info}"
+        ],
+        "description": "Brief information about the user"
+    },
+    "editmail": {
+        "prefix": "editmail",
+        "body": [
+            "{editmail}"
+        ],
+        "description": "E-mail address"
+    },
+    "status": {
+        "prefix": "status",
+        "body": [
+            "{status}"
+        ],
+        "description": "User status (his/her user group)"
+    },
+    "rate": {
+        "prefix": "rate",
+        "body": [
+            "{rate}"
+        ],
+        "description": "Current rating of user's articles (formed automatically on the basis of the articles rating)"
+    },
+    "commentsrate": {
+        "prefix": "commentsrate",
+        "body": [
+            "{commentsrate}"
+        ],
+        "description": "Displays the total rating of all comments of this user"
+    },
+    "editinfo": {
+        "prefix": "editinfo",
+        "body": [
+            "{editinfo}"
+        ],
+        "description": "Displays existing summary information in the field when editing the profile"
+    },
+    "hidemail": {
+        "prefix": "hidemail",
+        "body": [
+            "{hidemail}"
+        ],
+        "description": "Displays checkbox to hide an e-mail address"
+    },
+    "registration:UserProfile": {
+        "prefix": "registration",
+        "body": [
+            "{registration}"
+        ],
+        "description": "User's date of registration"
+    },
+    "editsignature": {
+        "prefix": "editsignature",
+        "body": [
+            "{editsignature}"
+        ],
+        "description": "Displays the user's signature formatted for editing"
+    },
+    "allowed-ip": {
+        "prefix": "allowed-ip",
+        "body": [
+            "{allowed-ip}"
+        ],
+        "description": "IP from which the registration is allowed"
+    },
+    "time_limit:if": {
+        "prefix": "time_limit",
+        "body": [
+            "[time_limit] ${1:text} [/time_limit]"
+        ],
+        "description": "Displays the enclosed text if user is in the temporary group"
+    },
+    "time_limit": {
+        "prefix": "time_limit",
+        "body": [
+            "{time_limit}"
+        ],
+        "description": "Displays the date before which the user is in the temporary group"
+    },
+    "rss": {
+        "prefix": "rss",
+        "body": [
+            "[rss] ${1:text} [/rss]"
+        ],
+        "description": "Link in the profile to the RSS feed of all the news of the user"
+    },
+    "ignore-list": {
+        "prefix": "ignore-list",
+        "body": [
+            "{ignore-list}"
+        ],
+        "description": "List of users from the ignore list"
+    },
+    "profile-user-group": {
+        "prefix": "profile-user-group",
+        "body": [
+            "[profile-user-group=${1:X}] ${2:Text} [/profile-user-group]"
+        ],
+        "description": "The enclosed text is displayed if the group of the user, whose profile is viewed, belongs to the group X, where X is the group number. Groups can also be listed by comma"
+    },
+    "not-profile-user-group": {
+        "prefix": "not-profile-user-group",
+        "body": [
+            "[not-profile-user-group=${1:X}] ${2:Text} [/not-profile-user-group]"
+        ],
+        "description": "The enclosed text is displayed if the group of the user, whose profile is viewed, does not belong to the group X, where X is the group number"
+    },
+    "timezones": {
+        "prefix": "timezones",
+        "body": [
+            "{timezones}"
+        ],
+        "description": "It shows list of available time zones, and allows user to choose time zone for his/her profile on the website"
+    },
+    "news-subscribe": {
+        "prefix": "news-subscribe",
+        "body": [
+            "{news-subscribe}"
+        ],
+        "description": "Displays a checkbox for unsubscribing from comments and the number of signed publications"
+    },
+    "unsubscribe": {
+        "prefix": "unsubscribe",
+        "body": [
+            "{unsubscribe}"
+        ],
+        "description": "Displays a checkbox for a subscription to receive notifications of new comments that are added to the news authored by the user"
+    },
+    "comments-reply-subscribe": {
+        "prefix": "comments-reply-subscribe",
+        "body": [
+            "{comments-reply-subscribe}"
+        ],
+        "description": "Displays a checkbox for a subscription to receive notifications of new comments that are replies to comments of the user"
+    },
+    "pm:UserProfile": {
+        "prefix": "pm",
+        "body": [
+            "{pm}"
+        ],
+        "description": "Link to writing a personal message to the user"
+    },
+    "email": {
+        "prefix": "email",
+        "body": [
+            "{email}"
+        ],
+        "description": "Link to writing E-mail messages to the user"
+    },
+    "twofactor-auth": {
+        "prefix": "twofactor-auth",
+        "body": [
+            "{twofactor-auth}"
+        ],
+        "description": "Displays the check box where user can enable or disable Two-Factor Authentication"
+    },
+    "searchtable": {
+        "prefix": "searchtable",
+        "body": [
+            "{searchtable}"
+        ],
+        "description": "Search form as a table"
+    },
+    "searchmsg": {
+        "prefix": "searchmsg",
+        "body": [
+            "{searchmsg}"
+        ],
+        "description": "Displays the message about the search results"
+    },
+    "searchmsg:if": {
+        "prefix": "searchmsg",
+        "body": [
+            "[searchmsg] ${1:and} [/searchmsg]"
+        ],
+        "description": "Displays the encoded text if search has been performed"
+    },
+    "searchposts": {
+        "prefix": "searchposts",
+        "body": [
+            "[searchposts] ${1:and} [/searchposts]"
+        ],
+        "description": "Displays search results for news"
+    },
+
+    "searchcomments": {
+        "prefix": "searchcomments",
+        "body": [
+            "[searchcomments] ${1:and} [/searchcomments]"
+        ],
+        "description": "Displays search results for comments"
+    },
+    "fullresult": {
+        "prefix": "fullresult",
+        "body": [
+            "[fullresult] ${1:and} [/fullresult]"
+        ],
+        "description": "Display results as articles"
+    },
+    "shortresult": {
+        "prefix": "shortresult",
+        "body": [
+            "[shortresult] ${1:and} [/shortresult]"
+        ],
+        "description": "Display results as titles"
+    },
+    "datenbank": {
+        "prefix": "datenbank",
+        "body": [
+            "{datenbank}"
+        ],
+        "description": "Total size of the database."
+    },
+    "news_num": {
+        "prefix": "news_num",
+        "body": [
+            "{news_num}"
+        ],
+        "description": "Total number of news"
+    },
+    "news_allow": {
+        "prefix": "news_allow",
+        "body": [
+            "{news_allow}"
+        ],
+        "description": "News published"
+    },
+    "news_main": {
+        "prefix": "news_main",
+        "body": [
+            "{news_main}"
+        ],
+        "description": "News published on Homepage"
+    },
+    "news_moder": {
+        "prefix": "news_moder",
+        "body": [
+            "{news_moder}"
+        ],
+        "description": "Awaiting moderation"
+    },
+    "comm_num": {
+        "prefix": "comm_num",
+        "body": [
+            "{comm_num}"
+        ],
+        "description": "Number of comments"
+    },
+    "user_num": {
+        "prefix": "user_num",
+        "body": [
+            "{user_num}"
+        ],
+        "description": "Registered users"
+    },
+    "user_banned": {
+        "prefix": "user_banned",
+        "body": [
+            "{user_banned}"
+        ],
+        "description": "Banned users"
+    },
+    "topusers": {
+        "prefix": "topusers",
+        "body": [
+            "{topusers}"
+        ],
+        "description": "List of the best authors"
+    },
+    "news_day": {
+        "prefix": "news_day",
+        "body": [
+            "{news_day}"
+        ],
+        "description": "News published per day"
+    },
+    "news_week": {
+        "prefix": "news_week",
+        "body": [
+            "{news_week}"
+        ],
+        "description": "News published this week"
+    },
+    "news_month": {
+        "prefix": "news_month",
+        "body": [
+            "{news_month}"
+        ],
+        "description": "News published this month"
+    },
+    "comm_day": {
+        "prefix": "comm_day",
+        "body": [
+            "{comm_day}"
+        ],
+        "description": "Comments published per day"
+    },
+    "comm_week": {
+        "prefix": "comm_week",
+        "body": [
+            "{comm_week}"
+        ],
+        "description": "Comments published this week"
+    },
+    "comm_month": {
+        "prefix": "comm_month",
+        "body": [
+            "{comm_month}"
+        ],
+        "description": "Comments published this month"
+    },
+    "user_day": {
+        "prefix": "user_day",
+        "body": [
+            "{user_day}"
+        ],
+        "description": "Users registered per day"
+    },
+    "user_week": {
+        "prefix": "user_week",
+        "body": [
+            "{user_week}"
+        ],
+        "description": "Users registered this week"
+    },
+    "user_month": {
+        "prefix": "user_month",
+        "body": [
+            "{user_month}"
+        ],
+        "description": "Users registered this month"
+    },
+    "title:info": {
+        "prefix": "title",
+        "body": [
+            "{title}"
+        ],
+        "description": "message title"
+    },
+    "error": {
+        "prefix": "error",
+        "body": [
+            "{error}"
+        ],
+        "description": "text of message"
+    },
+    "recipient:Feedback": {
+        "prefix": "recipient",
+        "body": [
+            "{recipient}"
+        ],
+        "description": "Recipients list"
+    },
+    "code:Feedback": {
+        "prefix": "code",
+        "body": [
+            "{code}"
+        ],
+        "description": "Displays CAPTCHA code"
+    },
+    "attachments": {
+        "prefix": "attachments",
+        "body": [
+            "[attachments] ${1:text} [/attachments]"
+        ],
+        "description": "Text in these tags is displayed if attachment of files for feedback letters is allowed for a certain user group"
+    },
+    "description": {
+        "prefix": "description",
+        "body": [
+            "{description}"
+        ],
+        "description": "Description of the static page"
+    },
+    "static": {
+        "prefix": "static",
+        "body": [
+            "{static}"
+        ],
+        "description": "Text of the static page"
+    },
+    "text:limit": {
+        "prefix": "text",
+        "body": [
+            "{text limit=\"${1:x}\"} "
+        ],
+        "description": "displays the text of the static page, without HTML formatting. Thus, the publication text is limited by X number of symbols"
+    },
+    "static:if": {
+        "prefix": "static",
+        "body": [
+            "[static=${1:page name}] ${2:text} [/static]"
+        ],
+        "description": "Displays the enclosed text if user is viewing the static page with a specified name"
+    },
+    "not-static": {
+        "prefix": "not-static",
+        "body": [
+            "[not-static=${1:page name}] ${2:text} [/not-static] "
+        ],
+        "description": "Displays the enclosed text if user does not view the static page with a specified name"
+    },
+    "inbox": {
+        "prefix": "inbox",
+        "body": [
+            "[inbox] ${1:and} [/inbox]"
+        ],
+        "description": "Link to inbox"
+    },
+    "outbox": {
+        "prefix": "outbox",
+        "body": [
+            "[outbox] ${1:and} [/outbox]"
+        ],
+        "description": "Link to sent mail"
+    },
+    "new_pm": {
+        "prefix": "new_pm",
+        "body": [
+            "[new_pm] ${1:and} [/new_pm]"
+        ],
+        "description": "Link to unread personal messages"
+    },
+    "pmlist:if": {
+        "prefix": "pmlist",
+        "body": [
+            "[pmlist] ${1:and} [/pmlist]"
+        ],
+        "description": "Displays the enclosed text if personal message list is viewed"
+    },
+    "pmlist": {
+        "prefix": "pmlist",
+        "body": [
+            "{pmlist}"
+        ],
+        "description": "Personal message list"
+    },
+    "newpm": {
+        "prefix": "newpm",
+        "body": [
+            "[newpm] ${1:and} [/newpm]"
+        ],
+        "description": "Displays the enclosed text when writing new personal message"
+    },
+    "pm-limit": {
+        "prefix": "pm-limit",
+        "body": [
+            "{pm-limit}"
+        ],
+        "description": "Maximum number of messages that user can store"
+    },
+    "proc-pm-limit": {
+        "prefix": "proc-pm-limit",
+        "body": [
+            "{proc-pm-limit}"
+        ],
+        "description": "Used space in the inbox of the user as a percentage"
+    },
+    "pm-progress-bar": {
+        "prefix": "pm-progress-bar",
+        "body": [
+            "{pm-progress-bar}"
+        ],
+        "description": "Bar of fullness of personal messages"
+    },
+    "author:pm": {
+        "prefix": "author",
+        "body": [
+            "{author}"
+        ],
+        "description": "Recipient of the message"
+    },
+    "subj": {
+        "prefix": "subj",
+        "body": [
+            "{subj}"
+        ],
+        "description": "Subject of the message"
+    },
+    "editor:pm": {
+        "prefix": "editor",
+        "body": [
+            "{editor}"
+        ],
+        "description": "Displays BBCODE or WYSIWYG editor depending on the settings for adding the comment"
+    },
+    "text:pm": {
+        "prefix": "text",
+        "body": [
+            "{text}"
+        ],
+        "description": "Text of message"
+    },
+    "readpm": {
+        "prefix": "readpm",
+        "body": [
+            "[readpm] ${1:and} [/readpm]"
+        ],
+        "description": "Displays text in the tags if the message is viewed"
+    },
+    "reply:pm": {
+        "prefix": "reply",
+        "body": [
+            "[reply] ${1:and} [/reply]"
+        ],
+        "description": "Link to reply to a message"
+    },
+    "del": {
+        "prefix": "del",
+        "body": [
+            "[del] ${1:and} [/del]"
+        ],
+        "description": "Link to delete a message"
+    },
+    "ignore": {
+        "prefix": "ignore",
+        "body": [
+            "[ignore]${1:text}[/ignore]"
+        ],
+        "description": "Displays inks to add user to ignore list"
+    },
+    "tags:limit": {
+        "prefix": "tags",
+        "body": [
+            "{tags limit=\"${1:100}\"}"
+        ],
+        "description": "Used to display the top 100 key tags from the database"
+    },
+    "vote_id": {
+        "prefix": "vote_id",
+        "body": [
+            "{vote_id}"
+        ],
+        "description": "Voting ID"
+    },
+    "votelist": {
+        "prefix": "votelist",
+        "body": [
+            "[votelist] ${1:and} [/votelist]"
+        ],
+        "description": "Displays the enclosed text for those who has not voted yet"
+    },
+    "voteresult": {
+        "prefix": "voteresult",
+        "body": [
+            "[voteresult] ${1:and} [/voteresult] "
+        ],
+        "description": "Displays the enclosed text for those who has already voted"
+    },
+    "link": {
+        "prefix": "link",
+        "body": [
+            "{link}"
+        ],
+        "description": "Link to the article"
+    },
+    "text": {
+        "prefix": "text",
+        "body": [
+            "{text}"
+        ],
+        "description": "Displays the article annotation"
+    },
+    "reason": {
+        "prefix": "reason",
+        "body": [
+            "{reason}"
+        ],
+        "description": "Used to display the reasons of the website shutdown that you specified in settings"
+    },
+    "speedbar": {
+        "prefix": "speedbar",
+        "body": [
+            "{speedbar}"
+        ],
+        "description": "In this section you can configure the display of the current location of the user on your website. This template uses only one tag {speedbar} which displays the location"
+    },
+    "shortrss": {
+        "prefix": "shortrss",
+        "body": [
+            "[shortrss] ${1:text} [/shortrss] "
+        ],
+        "description": "Displays the enclosed text if the short format of RSS news is enabled in script settings"
+    },
+    "fullrss": {
+        "prefix": "fullrss",
+        "body": [
+            "[fullrss] ${1:text} [/fullrss]"
+        ],
+        "description": "Displays the enclosed text if the full format of RSS news is enabled in script settings"
+    },
+    "yandexrss": {
+        "prefix": "yandexrss",
+        "body": [
+            "[yandexrss] ${1:text} [/yandexrss] "
+        ],
+        "description": "Displays the enclosed text if the \"Yandex news\" format of RSS news is enabled in script settings"
+    },
+    "rsslink": {
+        "prefix": "rsslink",
+        "body": [
+            "{rsslink}"
+        ],
+        "description": "Full URL of the article"
+    },
+    "rssauthor": {
+        "prefix": "rssauthor",
+        "body": [
+            "{rssauthor}"
+        ],
+        "description": "Author of the article"
+    },
+    "rssdate": {
+        "prefix": "rssdate",
+        "body": [
+            "{rssdate}"
+        ],
+        "description": "Date of the article (in rss.tpl)"
+    },
+    "images:rss": {
+        "prefix": "images",
+        "body": [
+            "{images}"
+        ],
+        "description": "Set of pictures for Yandex news"
+    },
+    "link:informer": {
+        "prefix": "link",
+        "body": [
+            "[link] ${1:text} [/link]"
+        ],
+        "description": "Creates a link to the partners news"
+    }
+    
+
+}

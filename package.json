@@ -1,0 +1,24 @@
+{
+    "name": "dle-snippet",
+    "displayName": "DLE Snippet",
+    "description": "Datalife Engine Template tags for vscode",
+    "version": "1.0.0",
+    "icon": "images/dle.png",
+    "publisher": "jyarali",
+    "engines": {
+        "vscode": "^1.25.0"
+    },
+    "galleryBanner": {
+        "color": "#FF9800",
+        "theme": "light"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [{
+            "language": "html",
+            "path": "./snippets/snippets.json"
+        }]
+    }
+}
