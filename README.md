@@ -3,8 +3,10 @@
 
 # DLE-snippets
 
-This extension contains code snippets(template tsgs) for Datalife Engine for VScode edior.
+This extension contains Datalife Engine code snippets (Template tags) for VScode edior.
 
-## installation
+## Installation
 
-simply open extension tabs in VScode and search for dle-snippet and install it.
+Simply open Extensions tab (`Ctrl+Shift+X`) in VScode and search for `dle-snippet` and install it.
+
+![DLE-snippet](./images/snippets.gif)
