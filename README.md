@@ -9,4 +9,4 @@ This extension contains Datalife Engine code snippets (Template tags) for VScode
 
 Simply open Extensions tab (`Ctrl+Shift+X`) in VScode and search for `dle-snippet` and install it.
 
-![DLE-snippet](./images/snippets.gif)
+![DLE-snippet](images/snippets.gif)
