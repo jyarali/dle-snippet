@@ -79,7 +79,7 @@
     "custom:all": {
         "prefix": "custom",
         "body": [
-            "{custom id=\"${1:1}\" category=\"${2:1}\" author=\"${3:author-name}\" days=\"${4:days-number}\" template=\"${5:template-name}\" available=\"${6|global,main,date,cat,showfull,search,userinfo,register,stats,pm,feedback,favorites,newposts,addnews,lastnews,lastcomments,lostpassword,static,catalog,alltags,tags,allnews|}\" navigation=\"${7|no,yes|}\" from=\"${8:0}\" limit=\"${9:10}\" fixed=\"${10|no,yes|}\" order=\"${11|date,editdate,rating,reads,comments,title,rand,id_as_list|}\" sort=\"${12|desc,asc|}\" cache=\"${13|no,yes|}\"}"
+            "{custom id=\"${1:1}\" category=\"${2:1}\" author=\"${3:author-name}\" days=\"${4:days-number}\" template=\"${5:template-name}\" available=\"${6|global,main,date,cat,showfull,search,userinfo,register,stats,pm,feedback,favorites,newposts,addnews,lastnews,lastcomments,lostpassword,static,catalog,alltags,tags,allnews|}\" navigation=\"${7|no,yes|}\" from=\"${8:0}\" limit=\"${9:10}\" fixed=\"${10|no,yes|}\" order=\"${11|date,editdate,rating,reads,comments,title,rand,id_as_list|}\" sort=\"${12|desc,asc|}\" cache=\"${13|no,yes|}\" xfields=\"${14:value1,value2}\" idexclude=\"${15:article IDs list}\" categoryexclude=\"${16:category list}\" tags=\"${17:news,templates}\" authorexclude=\"${18:admin,test}\" catalogexclude=\"{19:a,b}\" xfieldsexclude=\"${20:value1,value2}\"}"
         ],
         "description": "tag is responsible for the display of the article in a custom format"
     },
@@ -2477,7 +2477,68 @@
             "[link] ${1:text} [/link]"
         ],
         "description": "Creates a link to the partners news"
+    },
+    "not-available": {
+        "prefix": "not-available",
+        "body": [
+            "[not-available=${1:global}] ${2:text} [/not-available]$0"
+        ],
+        "description": "tag which is completely opposite to the available tag and displays text everywhere except the specified sections"
+    },
+    "sort": {
+        "prefix": "sort",
+        "body": [
+            "[sort]{sort}[/sort]$0"
+        ],
+        "description": "tags are responsible for the display of news sort order selection for user if it is allowed in script settings"
+    },
+    "smartphone": {
+        "prefix": "smartphone",
+        "body": [
+            "[smartphone] ${1:text} [/smartphone]$0"
+        ],
+        "description": "will display the text enclosed in tags if a visitor is browsing your site with a smartphone"
+    },
+    "not-smartphone": {
+        "prefix": "not-smartphone",
+        "body": [
+            "[not-smartphone] ${1:text} [/not-smartphone]$0"
+        ],
+        "description": "will display the text enclosed in tags if a visitor is browsing your site not with a smartphone"
+    },
+    "tablet": {
+        "prefix": "tablet",
+        "body": [
+            "[tablet] ${1:text} [/tablet]$0"
+        ],
+        "description": "will display the text enclosed in tags if a visitor is browsing your site with a tablet"
+    },
+    "not-tablet": {
+        "prefix": "not-tablet",
+        "body": [
+            "[not-tablet] ${1:text} [/not-tablet]$0"
+        ],
+        "description": "will display the text enclosed in tags if a visitor is browsing your site not with a tablet"
+    },
+    "desktop": {
+        "prefix": "desktop",
+        "body": [
+            "[desktop] ${1:text} [/desktop]$0"
+        ],
+        "description": "will display the text enclosed in tags if a visitor is browsing your site with a desktop computer or laptop"
+    },
+    "not-desktop": {
+        "prefix": "not-desktop",
+        "body": [
+            "[not-desktop] ${1:text} [/not-desktop]$0"
+        ],
+        "description": "will display the text enclosed in tags if a visitor is browsing your site not with a desktop computer or laptop"
+    },
+    "customcomments": {
+        "prefix": "customcomments",
+        "body": [
+            "{customcomments id=\"${1:1,2,5-8}\" category=\"${2:2,3,5-8}\" author=\"${3:x}\" days=\"${4:x}\" template=\"${5:custom}\" available=\"${6:global}\" from=\"${7:0}\" limit=\"${8:10}\" order=\"${9:date}\" sort=\"${10:desc}\" cache=\"${11:yes}\" categoryexclude=\"${12:2,7}\" authorexclude=\"${13:admin,test}\"}$0"
+        ],
+        "description": "allows to display comments in a customized form in any place of the website. This tag is used for the additional display of comments and can be used, for example, to display last comments on the main page of your website, etc"
     }
-    
-
 }
