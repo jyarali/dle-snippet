@@ -2,7 +2,7 @@
     "name": "dle-snippet",
     "displayName": "DLE Snippet",
     "description": "Datalife Engine Template tags for vscode",
-    "version": "1.1.2",
+    "version": "1.1.3",
     "icon": "images/dle.png",
     "publisher": "jyarali",
     "repository": {
